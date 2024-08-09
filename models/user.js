@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
-const foodSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-    }
-})
+// const foodSchema = new mongoose.Schema({
+//     name: {
+//         type: String,
+//         required: true,
+//     }
+// })
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    pantry: [foodSchema]
+    // pantry: [foodSchema]
 
     
 })

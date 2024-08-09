@@ -6,7 +6,15 @@
     <title>My Pantry</title>
   </head>
   <body>
-    <%- include('./partials/_navbar.ejs') %>
+    <%- include('../partials/_navbar.ejs') %>
+
     <h1>Welcome to my Pantry</h1>
+
+  <% foods.forEach(food => {%>
+      <p><%= food.name %></p>
+      <a href="/food/<%= food._id %>/edit" id="display">Edit</a>
+      <form action="/food/<%= food._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+  <% }); %>
   </body>
 </html>

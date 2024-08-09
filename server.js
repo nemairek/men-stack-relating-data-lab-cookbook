@@ -48,7 +48,7 @@ app.get("/", async (req,res) => {
 app.use(passUserToView)
 app.use('/auth', authController);
 app.use(isSignedIn);
-app.use('/users/:userId/foods',foodsController);
+app.use('/food',foodsController);
 
 
 app.listen(port, () => {
